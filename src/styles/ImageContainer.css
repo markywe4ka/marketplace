@@ -1,0 +1,90 @@
+/* 
+* ImageContainer.css - Стили для компонента изображений 
+*/
+
+.mk-image-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    background-color: #f0f0f0; /* Дефолтный фоновый цвет */
+  }
+  
+  .mk-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+  
+  .mk-image-placeholder {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+  }
+  
+  /* Добавляем эффект hover для изображений */
+  .mk-image-container:hover .mk-image {
+    transform: scale(1.05);
+  }
+  
+  /* Стили для высоты контейнеров в разных контекстах */
+  .mk-hero-image-wrap .mk-image-container {
+    height: 600px;
+  }
+  
+  .mk-collection-card .mk-image-container {
+    height: 200px;
+  }
+  
+  .mk-category-image-wrap .mk-image-container {
+    height: 250px;
+  }
+  
+  .mk-values-image-wrap .mk-image-container {
+    height: 400px;
+  }
+  
+  .mk-showcase-main .mk-image-container {
+    height: 500px;
+  }
+  
+  .mk-product-thumbnail .mk-image-container {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+  }
+  
+  /* Медиа-запросы для адаптивного дизайна */
+  @media (max-width: 992px) {
+    .mk-hero-image-wrap .mk-image-container {
+      height: 500px;
+    }
+    
+    .mk-showcase-main .mk-image-container {
+      height: 400px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .mk-hero-image-wrap .mk-image-container {
+      height: 400px;
+    }
+    
+    .mk-values-image-wrap .mk-image-container {
+      height: 300px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .mk-hero-image-wrap .mk-image-container {
+      height: 300px;
+    }
+    
+    .mk-collection-card .mk-image-container {
+      height: 150px;
+    }
+  }

@@ -1,0 +1,109 @@
+/* Carousel Styles */
+.mk-carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .mk-carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  
+  .mk-carousel-item {
+    flex-shrink: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .mk-carousel-item.mk-active {
+    opacity: 1;
+    position: relative;
+  }
+  
+  .mk-carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 2;
+    transition: all 0.25s ease;
+  }
+  
+  .mk-carousel-control:hover {
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .mk-carousel-prev {
+    left: 20px;
+  }
+  
+  .mk-carousel-next {
+    right: 20px;
+  }
+  
+  .mk-carousel-indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 2;
+  }
+  
+  .mk-carousel-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.25s ease;
+  }
+  
+  .mk-carousel-indicator.mk-active,
+  .mk-carousel-indicator:hover {
+    background-color: white;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .mk-carousel-control {
+      width: 30px;
+      height: 30px;
+      font-size: 14px;
+    }
+    
+    .mk-carousel-prev {
+      left: 10px;
+    }
+    
+    .mk-carousel-next {
+      right: 10px;
+    }
+    
+    .mk-carousel-indicators {
+      bottom: 10px;
+    }
+    
+    .mk-carousel-indicator {
+      width: 8px;
+      height: 8px;
+    }
+  }

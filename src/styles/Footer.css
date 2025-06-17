@@ -1,0 +1,119 @@
+/* MakeaveliFooter.css */
+
+.mk-footer {
+    background-color: #f9f9f9;
+    padding: 40px 20px 20px;
+    font-family: sans-serif;
+    color: #333;
+    border-top: 1px solid #ddd;
+  }
+  
+  .mk-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .mk-footer-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+  }
+  
+  .mk-footer-column {
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .mk-footer-heading {
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .mk-footer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .mk-footer-list li {
+    margin: 6px 0;
+  }
+  
+  .mk-footer-link {
+    text-decoration: none;
+    color: #555;
+    font-size: 14px;
+    transition: color 0.2s;
+  }
+  
+  .mk-footer-link:hover {
+    color: #000;
+  }
+  
+  .mk-footer-text {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #666;
+  }
+  
+  .mk-social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .mk-social-icon {
+    font-size: 18px;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  
+  .mk-social-icon:hover {
+    color: black;
+  }
+  
+  .mk-footer-bottom {
+    margin-top: 40px;
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    color: #777;
+  }
+  
+  .mk-payment-icons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .mk-payment-icon {
+    height: 20px;
+    width: auto;
+    object-fit: contain;
+  }
+  
+  /* Mobile */
+  @media (max-width: 768px) {
+    .mk-footer-grid {
+      flex-direction: column;
+      gap: 30px;
+    }
+  
+    .mk-footer-bottom {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+  
+    .mk-payment-icons {
+      margin-top: 10px;
+    }
+  }
+  

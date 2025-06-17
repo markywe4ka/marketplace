@@ -1,0 +1,557 @@
+/* Основные стили для страницы корзины */
+.cart-page {
+    padding: 40px 0 60px;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .page-title {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  
+  /* Стили для пустой корзины */
+  .empty-cart {
+    text-align: center;
+    padding: 60px 0;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    margin-bottom: 40px;
+  }
+  
+  .empty-cart-icon {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  
+  .empty-cart h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .empty-cart p {
+    color: #666;
+    margin-bottom: 25px;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #000;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #333;
+  }
+  
+  /* Сетка корзины */
+  .cart-container {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 30px;
+  }
+  
+  /* Стили для списка товаров */
+  .cart-items {
+    background-color: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .cart-header {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1.5fr 1fr 0.5fr;
+    background-color: #f5f5f5;
+    padding: 15px;
+    font-weight: 500;
+    color: #555;
+  }
+  
+  .cart-item {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1.5fr 1fr 0.5fr;
+    padding: 20px 15px;
+    border-bottom: 1px solid #eee;
+    align-items: center;
+  }
+  
+  .item-product {
+    display: flex;
+    align-items: center;
+  }
+  
+  .item-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-right: 15px;
+  }
+  
+  .item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .item-details {
+    flex: 1;
+  }
+  
+  .item-name {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+  
+  .item-meta {
+    display: flex;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .item-color, .item-size {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+  }
+  
+  .meta-label {
+    margin-right: 5px;
+  }
+  
+  .color-dot {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+  }
+  
+  .item-price, .item-total {
+    font-weight: 500;
+  }
+  
+  /* Стили для управления количеством */
+  .quantity-control {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    width: 120px;
+  }
+  
+  .quantity-btn {
+    width: 30px;
+    height: 40px;
+    background-color: #f5f5f5;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .quantity-btn:hover:not(:disabled) {
+    background-color: #e0e0e0;
+  }
+  
+  .quantity-btn:disabled {
+    color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .quantity-input {
+    width: 60px;
+    height: 40px;
+    border: none;
+    text-align: center;
+    font-size: 14px;
+    -moz-appearance: textfield;
+  }
+  
+  .quantity-input::-webkit-outer-spin-button,
+  .quantity-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  /* Стили для кнопки удаления */
+  .remove-btn {
+    background: none;
+    border: none;
+    color: #999;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 5px;
+  }
+  
+  .remove-btn:hover {
+    color: #e74c3c;
+  }
+  
+  /* Стили для действий с корзиной */
+  .cart-actions {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 15px;
+  }
+  
+  .clear-cart-btn, .continue-shopping-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .clear-cart-btn {
+    background-color: transparent;
+    border: 1px solid #ddd;
+    color: #666;
+  }
+  
+  .clear-cart-btn:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .continue-shopping-btn {
+    background-color: transparent;
+    border: 1px solid #000;
+    color: #000;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .continue-shopping-btn:hover {
+    background-color: #000;
+    color: #fff;
+  }
+  
+  /* Стили для итогов корзины */
+  .cart-summary {
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 25px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 20px;
+  }
+  
+  .summary-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+  
+  .summary-label {
+    color: #666;
+  }
+  
+  .summary-value {
+    font-weight: 500;
+  }
+  
+  /* Стили для методов доставки */
+  .shipping-methods {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .methods-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+  
+  .method-option {
+    margin-bottom: 15px;
+  }
+  
+  .method-option input[type="radio"] {
+    display: none;
+  }
+  
+  .method-option label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-bottom: 5px;
+    position: relative;
+  }
+  
+  .method-option label:before {
+    content: '';
+    width: 16px;
+    height: 16px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  
+  .method-option input[type="radio"]:checked + label:before {
+    border-color: #000;
+    background-color: #000;
+    box-shadow: inset 0 0 0 3px #fff;
+  }
+  
+  .method-option input[type="radio"]:checked + label {
+    border-color: #000;
+  }
+  
+  .method-name {
+    font-weight: 500;
+  }
+  
+  .method-cost {
+    font-weight: 500;
+  }
+  
+  .method-description {
+    font-size: 13px;
+    color: #999;
+    margin-left: 45px;
+  }
+  
+  /* Стили для купонов */
+  .coupon-section {
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .coupon-form {
+    display: flex;
+  }
+  
+  .coupon-input {
+    flex: 1;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px 0 0 4px;
+    font-size: 14px;
+  }
+  
+  .coupon-btn {
+    padding: 0 15px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .coupon-btn:hover:not(:disabled) {
+    background-color: #333;
+  }
+  
+  .coupon-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .applied-coupon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  
+  .coupon-code {
+    font-weight: 500;
+    margin-bottom: 3px;
+  }
+  
+  .coupon-discount {
+    color: #e74c3c;
+    font-size: 14px;
+  }
+  
+  .remove-coupon-btn {
+    background: none;
+    border: none;
+    color: #999;
+    font-size: 13px;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  .remove-coupon-btn:hover {
+    color: #666;
+  }
+  
+  .coupon-tip {
+    font-size: 13px;
+    color: #999;
+    margin-top: 10px;
+  }
+  
+  /* Стили для итоговой секции */
+  .total-section {
+    margin-top: 20px;
+  }
+  
+  .summary-row.subtotal,
+  .summary-row.shipping {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .summary-row.discount .discount-value {
+    color: #e74c3c;
+  }
+  
+  .summary-row.total {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .checkout-btn {
+    width: 100%;
+    padding: 15px 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 15px;
+  }
+  
+  .checkout-btn:hover {
+    background-color: #333;
+  }
+  
+  .secure-checkout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    color: #666;
+  }
+  
+  .secure-icon {
+    margin-right: 8px;
+  }
+  
+  /* Медиа-запросы для адаптивности */
+  @media (max-width: 1024px) {
+    .cart-container {
+      grid-template-columns: 1fr 300px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .cart-container {
+      grid-template-columns: 1fr;
+    }
+    
+    .cart-summary {
+      order: -1;
+      margin-bottom: 30px;
+      position: static;
+    }
+    
+    .cart-header {
+      display: none;
+    }
+    
+    .cart-item {
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+    
+    .item-product {
+      grid-column: 1 / -1;
+    }
+    
+    .item-price,
+    .item-quantity,
+    .item-total {
+      display: flex;
+      align-items: center;
+    }
+    
+    .item-price:before,
+    .item-quantity:before,
+    .item-total:before {
+      content: attr(data-label);
+      font-weight: 500;
+      width: 80px;
+    }
+    
+    .item-remove {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .page-title {
+      font-size: 28px;
+    }
+    
+    .cart-actions {
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    .clear-cart-btn,
+    .continue-shopping-btn {
+      width: 100%;
+      text-align: center;
+    }
+    
+    .coupon-form {
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    .coupon-input {
+      border-radius: 4px;
+    }
+    
+    .coupon-btn {
+      border-radius: 4px;
+      padding: 10px;
+    }
+  }
